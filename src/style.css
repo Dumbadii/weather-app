@@ -1,8 +1,37 @@
-:root {
-}
 * {
   border: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+nav {
+  background-color: black;
+  color: white;
+  height: 20vh;
+}
+.main {
+  height: 80vh;
+}
+.main .current-main {
+  background-color: white;
+  height: 20%;
+
+  display: flex;
+  gap: 1rem;
+}
+.main .current-other {
+  background-color: black;
+  color: white;
+  height: 20%;
+}
+.main .next-week {
+  background-color: white;
+  height: 60%;
+}
+
+.hours ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: space-between;
 }
