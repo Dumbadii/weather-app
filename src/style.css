@@ -8,8 +8,14 @@ nav {
   background-color: black;
   color: white;
   height: 20vh;
+  display: flex;
+  /* align-items: center; */
+}
+nav div {
+  align-self: center;
 }
 .main {
+  padding: 1rem;
   height: 80vh;
 }
 .main .current-main {
@@ -17,16 +23,41 @@ nav {
   height: 20%;
 
   display: flex;
-  gap: 1rem;
+}
+.main .current-main .left {
+  width: 10%;
+}
+.main .current-main .right {
+  width: 90%;
 }
 .main .current-other {
+  margin-top: 2rem;
   background-color: black;
   color: white;
-  height: 20%;
+  /* height: 20%; */
+  padding: 1rem;
+  /* justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.main .current-other div {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main .next-week {
   background-color: white;
-  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  padding: 2rem;
+}
+.main .next-week div {
+  border-bottom: 1px solid black;
+  padding: 1rem;
 }
 
 .hours ul {
@@ -34,4 +65,5 @@ nav {
   list-style: none;
   gap: 1rem;
   justify-content: space-between;
+  overflow-x: scroll;
 }

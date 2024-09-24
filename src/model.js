@@ -4,16 +4,15 @@ export default class Model {
     const API_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city},UK?key=${API_KEY}`;
     return API_URL;
   }
-  async getWeather(city, dateFrom, dateTo, render) {
+  async getWeather(city) {
+    let data = {};
     try {
       const response = await fetch(this.generateURL(city));
-      console.log(response.status);
-      const data = await response.json();
-      console.log(data);
-      render(data);
+      data = await response.json();
     } catch (err) {
       alert(err);
       throw err;
     }
+    return data;
   }
 }
